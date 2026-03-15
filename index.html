@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>웹인터 3주차 과제</title>
+	
+	<style>
+/*css초기화코드*/
+		body, h1, h2, p{margin:0;padding:0;}
+
+		header{background:;}
+		
+		div.title{
+					width: 1024px; 
+					margin: auto;
+					/*border: 1px solid black;*/
+					padding: 400px;
+					text-align: center;
+					}
+
+		div.contents{
+					width: 1024px; 
+					margin: auto;
+					/*border: 1px solid black;*/
+					padding: 120px;
+					text-align: center;
+					}
+		div.first{	width: 1024px; 
+					margin: auto;
+					background-color: WhiteSmoke;
+					/*border: 1px solid black;*/
+					padding: 120px;
+					text-align: left;
+					}
+		div.black{	background:#1B1B1B; 
+					width: 1024px; 
+					margin: auto;
+					/*border: 1px solid black;*/
+					padding: 200px;
+					text-align: center;
+					p{font-size: 21px; padding: 20px 300px; color: white; }
+					}
+
+		div.chatgpt{ padding: 20px; background-color: Snow; display: flex; flex-direction: column; }
+		p.gpttitle{	padding: 0; margin-bottom: 10px; font-weight: bold; text-align: center;}
+		p.gptexplain{ padding: 0; color: grey; font-size: 18px; text-align: left; word-break: keep-all }
+		h1{font-size: 120px; margin:0;}
+		h2{font-size: 95px; margin:0;}
+		p{font-size: 21px; padding: 25px 300px; word-break: keep-all;}
+		body{background:white;}
+		
+		div.image-container {
+    		position: relative; /* 중요: 자식 요소(텍스트) 배치의 기준점. */
+       		 width: 100%;          /* 부모 너비에 맞추고 싶다면 추가! */
+        	max-width: 800px;     /* 너무 커지지 않게 제한 */
+        	margin-left: 20px;   /* [필독] 왼쪽 여백을 최대로 밀어서 오른쪽으로 보내는 마법! */
+        	margin-right: auto;  /* 오른쪽 끝에서 20px 정도 여유를 줘봐! */
+   			 }
+
+		div.image-container img {
+        width: 100%; 
+        display: block;}
+
+
+    	p.overlay-text {
+    	font-size: 3px;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	width: 90%;
+   	 	margin: 0;          
+    	padding: 0;          
+    	text-align: center;  
+   		word-break: keep-all;}
+
+   		p.overlay-text:hover { font-size:21px }
+
+		p.overlay-text-mosaic {
+
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	width: 90%;
+   	 	margin: 0;          
+    	padding: 0;          
+    	text-align: center;  
+   		word-break: keep-all;
+
+   		filter: blur(8px); 
+    	transition: filter 0.3s ease; /* 효과가 부드럽게 바뀌도록 */
+    	cursor: pointer;}
+
+		p.overlay-text-mosaic:hover {
+    	/* 마우스를 올렸을 때: 모자이크 해제 */
+   		filter: blur(0);}
+    
+  
+	</style>
+		<meta charset="utf-8">
+
+</head>
+	<body>
+		<section>
+				<div class="first">
+					<h2>하루의 끝,</h2>
+					<p style="padding: 0; padding-top: 15px;"> 침대에 누워 폰을 보다 잠드는 것은 꽤 흔한 일입니다.<br>
+						그럴 경우 이어폰은 귀에 붙은채 잠자리 내내 주인과 함께하게 됩니다. 
+						</p>
+				
+				<img src="sleep.webp" style="display: block; margin: 50px auto; width: 100%;">
+					
+				<p style="text-align: center">그렇게 자고 일어나면 이어폰의 이물감이 귀에 <br>가득찬 아주 찝찝한 아침을 맞이하게 되죠.<br>
+				그런데 이상하게도 제 경우엔 그 이물감이 <br>입 속에서 느껴졌습니다.</p>
+
+
+				<p style="text-align: center; padding-bottom: 100px;">...어째서?</p>
+
+				</div>
+				</section>
+		
+		<section>
+				<div class="black">
+				<p>그렇습니다.<br> 
+				무언가 땅콩같은 게 제 입에 들어가 있었습니다.<p>
+				</div>
+		</section>
+
+		<section>
+				<div class="contents" style="background-color: FloralWhite;">
+					<h2>입에서 튀어나온 것은,</h2>
+
+					<p style="text-align: center; padding: 0; padding top:15px; padding-bottom: 15px;">새벽까지 유튜브를 보다 잠든 다음날 아침.<br>잠에서 깬 저는 입 안쪽에 ‘무언가 다른 것'의 존재를 느꼈습니다.</p>
+							<img src="insidemouse.webp" style="display: block; margin: 0 auto; padding-top: 50px; text-align:right">
+					<p style="color: grey; font-size: 32px">
+					“아니 이게 뭐지??”</p>
+					<p> 그 이물감에 놀란 저는 곧장 입에서 그 원인을 뱉어냈습니다. <br>
+					그리고 그것은 바로-</p>
+
+					<img src="buds2.png" style="display: block; width:100%; text-align:center">
+					
+
+					<p style="font-size:32px;"> 제 갤럭시 버즈 2의 오른쪽 부분이었습니다!</p>
+
+					<p style="word-break: keep-all;"><br>	
+					세상에! 
+					<br>주인의 타액으로 범벅이 된 불쌍한 버즈는 얼마나 오랫동안 구내에 있었던 것일까요?
+					<br>멀쩡히 작동은 할까요?
+					<br><br>아니,
+					애당초 어쩌다가 제 입에 들어간 걸까요?</p>
+					
+					<p style=" word-break: keep-all;"> 하지만 주인은 이 믿기지 않는 상황이 그냥 
+					<br>꿈이라고 여긴 것인지 이 해괴한 사건의 원인분석도 모자라 이어폰이 멀쩡한지 확인하지 않고 또 잠들어 버렸습니다.
+					</p>
+					
+					<img src="sleeppepe.jpg" style="display:block; width:20%; padding: 100px; margin: 0 auto; text-align:left">
+				</div>
+
+
+		<section>
+				<div class="contents" style="background-color: GhostWhite;">
+					<h2>이어폰은 죽었다</h2>
+
+				<p style="padding-top: 15px; padding-bottom: 100px; text-align: center;">점심때가 되서야 느적느적 일어난 주인은 상황이 생각보다 심상치 않다는 것을 확인합니다.<br>
+				일단은요,
+				<br>음질이 엉망입니다.</p>
+		
+		<div class="image-container">
+    	<img src="frame.png" alt="프레임 이미지">
+    	<p class="overlay-text-mosaic" class="mosaic-text" style="word-break: keep-all; color: grey;">
+    	"얼~~어붙은 마음에~ 누가 입 맞춰줄~까요?~~<br>
+		봄을 기다린~다는~ 말~ 그 말의 근거가~~ 될 수 있나요~~<br>
+		바삐 오가던 바람 여유 생겨 말하네요<br>
+		내가 기다린다는 봄 왔으니 이번엔 놓지 말라고"</p>
+		</div>
+				
+		<p style="padding:0; padding:100px; text-align: center;">
+		음향은 동굴처럼 울리듯이 들려왔고,</p>
+
+		<div class="image-container">
+    	<img src="frame.png" alt="프레임">
+    	<p class="overlay-text " style="color: grey; word-break: keep-all;">"아~슬히 고개 내민 내게~
+		첫~ 봄인사를 건~네줘요~<br>
+		피울 수 있게 도와줘요~ 이~~ 마음~ 저무는 날까지~<br>
+		푸른 낭만을 선 물할게~ 초라한 나를 꺾어가요~~"</p>
+</div>
+				<p style="padding:0; padding:50px; text-align: center;"> 음량 출력은 정상적인 쪽과 비교해서 확실히 낮아졌습니다. </p>
+
+				<p>아주 제대로 고장난거죠.
+					<br>어휴.</p>
+
+				</div>
+				</section>
+
+		<section>
+				<div class="contents" style="background-color: LavenderBlush;">
+					<h2>GPT를 믿기</h2>
+					<p style="padding:0; padding-top: 15px; padding-bottom: 100px;">현실을 받아들이지 못한 주인은 미련한 시도를 하게됩니다.
+					</p>
+	
+
+					<img src="chatgpt.png" style="display: block; margin: 0 auto; text-align:center; padding: 50px;">
+
+					<p style="word-break: keep-all;">
+					지푸라기를 잡는 심정으로 믿음직한 ChatGPT에게 이어폰 침수시 해결법을 물어봅니다. 
+					이건 침수가 아니라 침침에 가까운게 아닌가 싶긴한데
+					어쨌든 선량한 ai는 내막도 모른채 갖가지 해결법을 소개해줍니다. 
+
+
+					<div style="display: grid; 
+            	grid-template-columns: 1fr 1fr; 
+            	width: 100%; 
+            	max-width: 800px;
+            	margin: 0 auto;
+            	padding-top: 50px;
+            	padding-bottom: 50px;
+            	gap: 20px;">
+          
+
+    <div class="chatgpt">
+        <p class="gpttitle">1. 외부 수분 제거</p>
+        <p class="gptexplain">
+            먼저 부드러운 천이나 수건으로 액체를 닦아내야 합니다. <br> 하지만 이 조그마한 이어폰의 철망을 닦는다고 뭐가 크게 달라질까요.
+        </p>
+    </div>
+
+    <div class="chatgpt">
+        <p class="gpttitle">2. 건조</p>
+        <p class="gptexplain">
+            건조에는 두 가지 방식이 있습니다. <br>하나는 드라이기 건조, 다른 하나는 자연 건조. <br> 드라이기를 사용할 때는 약한 출력의 냉풍을 쓰세요! 자연 건조의 경우에는 통풍이 잘되는 그늘에서 최소 24~48시간을 기다려야 합니다.
+            <br><br>이 경우 ‘빨리'를 선도하는 한국인인 저에게는 매우 가혹한 처사였습니다.
+        </p>
+    </div>
+
+    <div class="chatgpt">
+        <p class="gpttitle">3. 알코올 쓰기</p>
+        <p class="gptexplain">
+            알코올을 써볼까요 ? 면봉에 살짝 적셔 툭툭 두드리고 건조되길 기다립니다. 알코올은 증발이 빠르고, 전기 전도성도 낮아 여러모로 쓸모있습니다. <br><br> 다만 잘못하면 겉면 코팅이 벗겨질 수 있습니다.
+			<br> 그리고 어디까지나 물이 아닌 라면국물이나 바닷물에 빠트렸을 때 효과가 있는 방법이랍니다. 
+			<br>제 경우에는 타액이지만.
+        </p>
+    </div>
+
+    <div class="chatgpt">
+        <p class="gpttitle">4. 제습제 쓰기</p>
+        <p class="gptexplain">
+            지퍼백에 침수당한 이어폰과 실리카겔을 함께 넣어 밀봉합니다. <br> 실리카겔 덕에 더 빠르고 더 확실히 수분이 제거될 것입니다. <br> <br> 노 페인 노 게인
+        </p>
+    </div>
+      </div>
+      	<div class="chatgpt" 
+      		 style= "width: 100%; 
+            	max-width: 755.6px;
+            	margin: 0 auto;">
+      	<img src="waiting.png" style="display: block; margin: 0 auto; padding-top:50px; padding-bottom: 25px; text-align:center; width:50%;">
+        <p class="gpttitle">
+        	5. 기다리기</p>
+        	<p class="gptexplain" style="font-size: 21px; padding: 25px 150px; text-align: center; color: black; word-break: keep all;">
+        전 제시된 모든 방법을 시도해봤지만 결국에는 기다리는 수 밖에 없었습니다.
+		<br>하지만 역시 희망 고문에 불과했기 때문일까요?
+		<br>저는 슬슬 마음의 준비를 시작했습니다.
+	</div>
+
+ 
+  </div>
+</section>
+
+
+	<section>
+			<div class="contents" style="background-color: dimgray; color: floralwhite;">
+				<h2>사실을 받아들이기</h2>
+				
+
+
+				<img src="baby.gif" style="display: block; margin: 0 auto; padding-top:50px; padding-bottom: 25px; text-align:center">
+
+				<p>
+            어흐흑 맙소사. 
+		<br> 대학도 가고 해외여행도 가고 군대도 가고 장장 3년을 함께한 내 이어폰 친구가 이렇게 허무하게 가버리다니... 그것도 주인의 입 속에서...</p>
+
+
+        <p style="word-break: keep-all; padding-top: 50px;">장례식이라도 치뤄줘야 할까요? 
+		<br> 혹시 이어폰은 사망보험금같은게 없나요?
+		<br> 말해두자면 이어폰 한 쪽 고치는 서비스는 사실상 없습니다. 알아보니까 그냥 새로 사래요.
+        <br> 그래요.
+        <br> 이렇게 어처구니 없게 제 이어폰은 가버렸고 저는 신품을 사기로 결정했습니다...
+        </p>
+
+        <img src="dead.png" style="display: block; margin: 0 auto; text-align:center; width: 60%; padding-top: 50px; padding-bottom: 15px;">
+        <p style="font-size:32px"> R.I.P </p>
+        <p style="color:lightgrey; padding-bottom: 100px;"> 2022.12<br> ~ <br>??? </p>
+ 
+    	</div>
+		</section>
+
+		<section>
+				<div class="contents">
+					<h2>이어폰을 믿기</h2>
+					<p style="padding:0; padding-top: 15px; padding-bottom: 50px;">여기서 끝이 아니다!
+					</p>
+					<img src="tryit.jpg" style="display: block; margin: 0 auto; text-align:center; width: 60%; padding-top: 50px; padding-bottom: 15px;">
+					<p>자포자기 한채 신품을 사기로 결정한 저는 그래도 미련이 남았는지 마지막으로 이어폰으로 음악을 들어보기로 합니다.
+					</p>
+
+					<img src="monkey1.jpg" style="display: block; margin: 0 auto; text-align:center; width: 60%; padding-top: 50px; padding-bottom: 15px;">
+					<p style="color: grey; font-size: 32px">
+					“음?”</p>
+
+					<img src="monkey2.avif" style="display: block; margin: 0 auto; text-align:center; width: 60%; padding-top: 50px; padding-bottom: 15px;">
+					<p style="color: grey; font-size: 32px">
+					“어어어???”</p>
+
+
+					<p style="font-size:48px;">이어폰이 살아났어요!!!</p> 
+
+
+
+					<p style="word-break: keep-all;"> 온갖 건조 행위가 효과가 있었던 걸까요?
+출력은 정상적인 쪽과 비슷해졌고 동굴 울림 현상은 없어졌습니다.<br><br>
+물론 원 상태 그대로 깔끔히 돌아오지는 않았습니다. 오른쪽만 착용하면 역시 음질에 위화감이 있었습니다.<br>
+하지만 양쪽을 모두 착용하자 뭔가가 기술적으로 일어났는지 이전과 다를바없는 음질로 출력됐습니다.<br> <br> 하이고, 이게 21세기의 기적일까요? </p>
+
+		</div>
+		</section>
+
+
+		<section>
+			<div class="contents">
+					<img src="mine" style="display: block; margin: 0 auto;">
+					<p>이후로도 죽었다 살아난 이어폰을 저는 애용하고 있습니다. 이런 사건까지 겪으니 더더욱 친밀해진 기분도 드네요.
+					</p>
+
+					<p>이런 일이 또 생길 수 있으니 이어폰을 끼고 자는 일은 거의 됐습니다.
+						<br>하지만 가끔은 끼고 자요. 정말 가끔.
+						<br>그리고 정말 가끔 또다시 입에 들어간 이어폰을 상상합니다.</p>
+
+			</section>
+		<footer>
+			contact, author
+	</body>
+</html>
