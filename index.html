@@ -12,6 +12,23 @@
 
 		header{background:;}
 		
+
+		nav ul {
+			margin: auto;
+    		list-style: none;      /* 점 없애기 */
+    		padding: 30px;
+    		display: flex;         /* 가로로 나열 */
+    		justify-content: center;
+    		gap: 180px;             /* 메뉴 사이 간격 */}
+
+		nav a {
+ 			text-decoration: none; /* 밑줄 없애기 */
+    		color: black;           /* 희끄무리한 블랙 */
+    		outline-color: none;
+    		font-weight: bold;
+    		font-size: 20px;
+}
+
 		div.title{
 					width: 1024px; 
 					margin: auto;
@@ -24,72 +41,79 @@
 					width: 1024px; 
 					margin: auto;
 					/*border: 1px solid black;*/
-					padding: 120px;
+					padding: 160px;
 					text-align: center;
 					}
 		div.first{	width: 1024px; 
 					margin: auto;
 					background-color: WhiteSmoke;
 					/*border: 1px solid black;*/
-					padding: 120px;
+					padding: 160px;
 					text-align: left;
 					}
 		div.black{	background:#1B1B1B; 
 					width: 1024px; 
 					margin: auto;
 					/*border: 1px solid black;*/
-					padding: 200px;
+					padding: 400px 200px;
 					text-align: center;
 					p{font-size: 21px; padding: 20px 300px; color: white; }
 					}
 
 		div.chatgpt{ padding: 20px; background-color: Snow; display: flex; flex-direction: column; }
 		p.gpttitle{	padding: 0; margin-bottom: 10px; font-weight: bold; text-align: center;}
-		p.gptexplain{ padding: 0; color: grey; font-size: 18px; text-align: left; word-break: keep-all }
+		p.gptexplain{ padding: 0; color: grey; font-size: 15px; text-align: left; word-break: keep-all }
+
 		h1{font-size: 120px; margin:0;}
-		h2{font-size: 95px; margin:0;}
-		p{font-size: 21px; padding: 25px 300px; word-break: keep-all;}
+		h2{font-size: 72px; margin:0;}
+		p.nav{padding: 0; font-size: 16px;}
+		p{font-size: 18px; padding: 25px 300px; word-break: keep-all; color:EerieBlack;}
+		p.titlebottom{padding: 0; padding-top: 25px; text-align: center;} 
 		body{background:white;}
 		
 		div.image-container {
     		position: relative; /* 중요: 자식 요소(텍스트) 배치의 기준점. */
-       		 width: 100%;          /* 부모 너비에 맞추고 싶다면 추가! */
-        	max-width: 800px;     /* 너무 커지지 않게 제한 */
-        	margin-left: 20px;   /* [필독] 왼쪽 여백을 최대로 밀어서 오른쪽으로 보내는 마법! */
-        	margin-right: auto;  /* 오른쪽 끝에서 20px 정도 여유를 줘봐! */
-   			 }
+       		width: 100%;          /* 부모 너비에 맞추고 싶다면 추가! */ 
+       		overflow: hidden;  
+       					 }
 
 		div.image-container img {
-        width: 100%; 
-        display: block;}
+       	display: block;
+    	width: 100%;
+    	height: auto;}
 
 
     	p.overlay-text {
-    	font-size: 3px;
+    	font-size: 5px;
     	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%);
-    	width: 90%;
-   	 	margin: 0;          
-    	padding: 0;          
+   		top: 38%;    
+    	left: 350px;
+    	width: 100%;   
+    	height: 60%;  
+    	display: flex;  
     	text-align: center;  
    		word-break: keep-all;}
 
-   		p.overlay-text:hover { font-size:21px }
-
-		p.overlay-text-mosaic {
-
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%);
-    	width: 90%;
-   	 	margin: 0;          
-    	padding: 0;          
+   		p.overlay-text:hover { position: absolute;
+   		 top: 23.5%;    
+    	left: 145px;
+    	width: 100%;   
+    	height: 60%;  
+    	display: flex;  
     	text-align: center;  
    		word-break: keep-all;
+   		font-size:24px }
 
+		p.overlay-text-mosaic {
+    	position: absolute;
+   		 top: 23.5%;    
+    	left: 162px;
+    	width: 100%;   
+    	height: 60%;  
+    	display: flex;  
+    	text-align: center;  
+   		word-break: keep-all;
+   		font-size:24px;
    		filter: blur(8px); 
     	transition: filter 0.3s ease; /* 효과가 부드럽게 바뀌도록 */
     	cursor: pointer;}
@@ -97,6 +121,10 @@
 		p.overlay-text-mosaic:hover {
     	/* 마우스를 올렸을 때: 모자이크 해제 */
    		filter: blur(0);}
+
+
+
+
     
   
 	</style>
@@ -104,11 +132,24 @@
 
 </head>
 	<body>
-		<section>
+		<nav> 
+			<ul>
+				<li><a href="#secsion1"> 01 </a></li>
+				<li><a href="#secsion2"> 02 </a></li>
+				<li><a href="#secsion3"> 03 </a></li>
+				<li><a href="#secsion4"> 04 </a></li>
+				<li><a href="#secsion5"> 05 </a></li>
+				<li><a href="#secsion6"> 06 </a></li>
+			</ul> 
+		</nav>
+		
+
+		<section id="secsion1">
 				<div class="first">
+					<p class="nav" style="text-align: left;"> 01 </p >
 					<h2>하루의 끝,</h2>
-					<p style="padding: 0; padding-top: 15px;"> 침대에 누워 폰을 보다 잠드는 것은 꽤 흔한 일입니다.<br>
-						그럴 경우 이어폰은 귀에 붙은채 잠자리 내내 주인과 함께하게 됩니다. 
+					<p class="titlebottom" style="text-align: left;"> 침대에 누워 폰을 보다 잠드는 것은 꽤 흔한 일입니다.<br>
+						그럴 경우 이어폰은 귀에 붙은 채 잠자리 내내 주인과 함께하게 됩니다. 
 						</p>
 				
 				<img src="sleep.webp" style="display: block; margin: 50px auto; width: 100%;">
@@ -125,15 +166,16 @@
 		<section>
 				<div class="black">
 				<p>그렇습니다.<br> 
-				무언가 땅콩같은 게 제 입에 들어가 있었습니다.<p>
+				무언가 제 입 속에 들어가 있었습니다.<p>
 				</div>
 		</section>
 
-		<section>
+		<section id="secsion2">
 				<div class="contents" style="background-color: FloralWhite;">
+					<p class="nav"> 02 </p >
 					<h2>입에서 튀어나온 것은,</h2>
 
-					<p style="text-align: center; padding: 0; padding top:15px; padding-bottom: 15px;">새벽까지 유튜브를 보다 잠든 다음날 아침.<br>잠에서 깬 저는 입 안쪽에 ‘무언가 다른 것'의 존재를 느꼈습니다.</p>
+					<p class="titlebottom">새벽까지 유튜브를 보다 잠든 다음날 아침.<br>잠에서 깬 저는 입 안쪽에 ‘무언가 다른 것'의 존재를 느꼈습니다.</p>
 							<img src="insidemouse.webp" style="display: block; margin: 0 auto; padding-top: 50px; text-align:right">
 					<p style="color: grey; font-size: 32px">
 					“아니 이게 뭐지??”</p>
@@ -158,34 +200,37 @@
 					
 					<img src="sleeppepe.jpg" style="display:block; width:20%; padding: 100px; margin: 0 auto; text-align:left">
 				</div>
+				</section>
 
-
-		<section>
+		<section id="secsion3">
 				<div class="contents" style="background-color: GhostWhite;">
+					<p class="nav"> 03 </p >
 					<h2>이어폰은 죽었다</h2>
 
-				<p style="padding-top: 15px; padding-bottom: 100px; text-align: center;">점심때가 되서야 느적느적 일어난 주인은 상황이 생각보다 심상치 않다는 것을 확인합니다.<br>
+				<p class="titlebottom" style="padding-bottom: 100px; text-align: center;">점심때가 되서야 느적느적 일어난 주인은 상황이 생각보다 심상치 않다는 것을 확인합니다.<br>
 				일단은요,
-				<br>음질이 엉망입니다.</p>
+				<br>음질이 엉망이었습니다.</p>
 		
 		<div class="image-container">
     	<img src="frame.png" alt="프레임 이미지">
-    	<p class="overlay-text-mosaic" class="mosaic-text" style="word-break: keep-all; color: grey;">
-    	"얼~~어붙은 마음에~ 누가 입 맞춰줄~까요?~~<br>
-		봄을 기다린~다는~ 말~ 그 말의 근거가~~ 될 수 있나요~~<br>
+    	<p class="overlay-text-mosaic" style="word-break: keep-all; color: grey;">
+    	얼~~어붙은 마음에~ 누가 입 맞춰줄~까요?~~<br>
+		봄을 기다린~다는~ 말~ <br>
+		그 말의 근거가~~ 될 수 있나요~~<br>
 		바삐 오가던 바람 여유 생겨 말하네요<br>
-		내가 기다린다는 봄 왔으니 이번엔 놓지 말라고"</p>
+		내가 기다린다는 봄 왔으니 이번엔 놓지 말라고</p>
 		</div>
 				
-		<p style="padding:0; padding:100px; text-align: center;">
+		<p style="padding:0; padding:100px; text-align: right;">
 		음향은 동굴처럼 울리듯이 들려왔고,</p>
 
 		<div class="image-container">
     	<img src="frame.png" alt="프레임">
-    	<p class="overlay-text " style="color: grey; word-break: keep-all;">"아~슬히 고개 내민 내게~
-		첫~ 봄인사를 건~네줘요~<br>
-		피울 수 있게 도와줘요~ 이~~ 마음~ 저무는 날까지~<br>
-		푸른 낭만을 선 물할게~ 초라한 나를 꺾어가요~~"</p>
+    	<p class="overlay-text " style="color: grey; word-break: keep-all;">아~슬히 고개 내민 내게~첫~ 봄인사를 건~네줘요~
+		<br>피울 수 있게 도와줘요~이~~ 마음~ 저무는 날까지~<br>
+		푸른 낭만을 선 물할게~ 초라한 나를 꺾어가요~~<br>
+		아슬히 고개 내민 내게~첫~ 봄인사를 건~네줘요~<br>
+		피울 수 있게 도와줘요~~</p>
 </div>
 				<p style="padding:0; padding:50px; text-align: center;"> 음량 출력은 정상적인 쪽과 비교해서 확실히 낮아졌습니다. </p>
 
@@ -195,27 +240,35 @@
 				</div>
 				</section>
 
-		<section>
+		<section id="secsion4">
 				<div class="contents" style="background-color: LavenderBlush;">
+					<p class="nav"> 04 </p >
 					<h2>GPT를 믿기</h2>
-					<p style="padding:0; padding-top: 15px; padding-bottom: 100px;">현실을 받아들이지 못한 주인은 미련한 시도를 하게됩니다.
+					<p class="titlebottom">
+						현실을 받아들이지 못한 주인은 미련한 시도를 시작합니다.
 					</p>
 	
 
 					<img src="chatgpt.png" style="display: block; margin: 0 auto; text-align:center; padding: 50px;">
 
-					<p style="word-break: keep-all;">
+					<p style="word-break: keep-all; padding-top: 0; padding-bottom: 100px;">
 					지푸라기를 잡는 심정으로 믿음직한 ChatGPT에게 이어폰 침수시 해결법을 물어봅니다. 
 					이건 침수가 아니라 침침에 가까운게 아닌가 싶긴한데
 					어쨌든 선량한 ai는 내막도 모른채 갖가지 해결법을 소개해줍니다. 
 
 
+
+				<p style="font-size:50px; padding:0; padding-top: 100px; color: dimgray;"> " </p>
+				<p style="font-size:32px; padding:0; ; color: dimgray;"> What if:<br>
+				입에 이어폰이 들어갔다 나왔다면?</p>
+				<p style="font-size:50px; padding: o; color: dimgray;"> " </p>
+						
 					<div style="display: grid; 
             	grid-template-columns: 1fr 1fr; 
             	width: 100%; 
             	max-width: 800px;
             	margin: 0 auto;
-            	padding-top: 50px;
+            	padding-top: 25px;
             	padding-bottom: 50px;
             	gap: 20px;">
           
@@ -250,6 +303,7 @@
             지퍼백에 침수당한 이어폰과 실리카겔을 함께 넣어 밀봉합니다. <br> 실리카겔 덕에 더 빠르고 더 확실히 수분이 제거될 것입니다. <br> <br> 노 페인 노 게인
         </p>
     </div>
+      
       </div>
       	<div class="chatgpt" 
       		 style= "width: 100%; 
@@ -258,10 +312,10 @@
       	<img src="waiting.png" style="display: block; margin: 0 auto; padding-top:50px; padding-bottom: 25px; text-align:center; width:50%;">
         <p class="gpttitle">
         	5. 기다리기</p>
-        	<p class="gptexplain" style="font-size: 21px; padding: 25px 150px; text-align: center; color: black; word-break: keep all;">
+        	<p class="gptexplain" style="font-size: 18px; padding: 0px 150px; padding-bottom: 50px; text-align: center; color: black; word-break: keep all;">
         전 제시된 모든 방법을 시도해봤지만 결국에는 기다리는 수 밖에 없었습니다.
-		<br>하지만 역시 희망 고문에 불과했기 때문일까요?
-		<br>저는 슬슬 마음의 준비를 시작했습니다.
+		하지만 역시 희망 고문에 불과했기 때문일까요?
+		저는 슬슬 마음의 준비를 시작했습니다.
 	</div>
 
  
@@ -269,16 +323,14 @@
 </section>
 
 
-	<section>
+	<section id="secsion5">
 			<div class="contents" style="background-color: dimgray; color: floralwhite;">
+				<p class="nav"> 05 </p >
 				<h2>사실을 받아들이기</h2>
-				
-
+				<p class="titlebottom">어흐흑 맙소사.</p> 
 
 				<img src="baby.gif" style="display: block; margin: 0 auto; padding-top:50px; padding-bottom: 25px; text-align:center">
-
-				<p>
-            어흐흑 맙소사. 
+				<p> 
 		<br> 대학도 가고 해외여행도 가고 군대도 가고 장장 3년을 함께한 내 이어폰 친구가 이렇게 허무하게 가버리다니... 그것도 주인의 입 속에서...</p>
 
 
@@ -296,8 +348,9 @@
     	</div>
 		</section>
 
-		<section>
+		<section id="secsion6">
 				<div class="contents">
+					<p class="nav;"> 06 </p >
 					<h2>이어폰을 믿기</h2>
 					<p style="padding:0; padding-top: 15px; padding-bottom: 50px;">여기서 끝이 아니다!
 					</p>
@@ -333,9 +386,12 @@
 					<p>이후로도 죽었다 살아난 이어폰을 저는 애용하고 있습니다. 이런 사건까지 겪으니 더더욱 친밀해진 기분도 드네요.
 					</p>
 
-					<p>이런 일이 또 생길 수 있으니 이어폰을 끼고 자는 일은 거의 됐습니다.
-						<br>하지만 가끔은 끼고 자요. 정말 가끔.
-						<br>그리고 정말 가끔 또다시 입에 들어간 이어폰을 상상합니다.</p>
+					<p>이런 일이 또 생길 수 있으니 이어폰을 끼고 자는 일은 거의 없게 됐습니다.
+						<br>아니 가끔은 끼고 자요. 정말 가끔.
+						<br>뭐, 또 입에 들어가겠어요?
+						<br>설마
+						<br>끝
+					</p>
 
 			</section>
 		<footer>
