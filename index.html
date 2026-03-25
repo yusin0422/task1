@@ -42,13 +42,18 @@
 
 		img{border-radius: 10px}
 
+
 		div.title{
 					width: 1024px; 
 					margin: auto ;
 					/*border: 1px solid black;*/
 					padding: 200px;
 					text-align: center;
+					background: url(title.png); background-size:cover;
+		background-attachment: fixed;
 					}
+		div.title::after{content: "" background-color: rgba(255, 255, 255, 0.5);}
+
 
 		div.contents{
 					width: 1024px; 
@@ -57,34 +62,53 @@
 					padding: 150px;
 					text-align: center;
 					}
+		
 		div.first{	width: 1024px; 
 					margin: auto;
 					background-color: WhiteSmoke;
 					/*border: 1px solid black;*/
-					padding: 100px;
+					padding: 150px;
 					text-align: left;
 					}
 		div.black{	background:#1B1B1B; 
-					width: 1024px; 
 					margin: auto;
 					/*border: 1px solid black;*/
-					padding: 400px 100px;
+					padding: 400px 150px;
 					text-align: center;
-					p{font-size: 21px; padding: 20px 300px; color: white; }
+					p{font-size: 32px; padding: 20px 300px; color: white; }
 					}
 
-		div.chatgpt{ padding: 20px; border: 3px dashed; border-radius: 10px; background-color: Snow; display: flex; flex-direction: column; }
-		p.gpttitle{	padding: 0; margin-bottom: 10px; font-weight: bold; text-align: center;}
+		div.chatgpt{ padding: 20px; border: 3px dashed; border-radius: 10px; background-color: Snow;  flex-direction: column; justify-content: flex-start; align-items: stretch; }
+		p.gpttitle{ padding: 0; margin-top: 0 !important; 
+    margin-bottom: 20px; 
+    line-height: 1.2; font-weight: bold; text-align: center;}
 		p.gptexplain{ padding: 0; color: grey; font-size: 15px; text-align: left; word-break: keep-all }
+
 
 		h1{font-size: 120px; margin: auto 0; text-align: center;}
 		h2{font-size: 81px; margin: auto 0;}
-		p.nav{padding: 0; font-size: 16px;}
-		p{font-size: 21px; padding: 25px 300px; word-break: keep-all; color:EerieBlack;}
-		p.titlebottom{padding: 0; padding-top: 25px; text-align: center;} 
-		p.subtitle{color: grey; font-size: 32px;}
-		body{background:white;}
+		p.nav{padding: 0; font-size: 16px; text-align: center;}
 		
+		p{font-size: 21px; padding: 25px 300px; margin: auto; word-break: keep-all; color:EerieBlack; text-align:left; font-weight: 500;}
+
+		.tired{padding:25px; margin: auto ;display: flex;
+    gap: 30px;            
+    align-items: stretch; box-sizing: border-box; /* [핵심] 패딩을 너비 안으로 포함시키기! 🐾 */
+    width: 100%;}
+
+    	.tired span {
+    	flex: 1;              
+    	display: block;       
+		}
+
+		p.zomzzalbm{text-align:center;}
+		p.titlebottom{padding: 0; padding-top: 25px; text-align: center;} 
+		p.subtitle{color: grey; font-size: 32px; text-align: center;}
+		body{background:white;}
+		.blur{
+				    backdrop-filter:blur(5px);
+				    
+				}
 		div.image-container {
     		position: relative; /* 중요: 자식 요소(텍스트) 배치의 기준점. */
        		width: 100%;          /* 부모 너비에 맞추고 싶다면 추가! */ 
@@ -138,6 +162,7 @@
     	/* 마우스를 올렸을 때: 모자이크 해제 */
    		filter: blur(0);}
 
+
     
   
 	</style>
@@ -180,20 +205,20 @@
 				
 				<img src="sleep.webp" style="display: block; margin: 50px auto; width: 100%; border-radius: 10px">
 					
-				<p style="text-align: center">그렇게 자고 일어나면 이어폰의 이물감이 귀에 <br>가득찬 아주 찝찝한 아침을 맞이하게 되죠.<br>
-				그런데 이상하게도 제 경우엔 그 이물감이 <br>
+				<p>그렇게 자고 일어나면 이어폰의 이물감이 귀에 가득찬 아주 찝찝한 아침을 맞이하게 되죠.
+				그런데 이상하게도 제 경우엔 그 이물감이
 				입 속에서 느껴졌습니다.</p>
 
 
-				<p style="text-align: center; padding-bottom: 100px;">...어째서?</p>
+				<p style="padding-bottom: 100px;">...어째서?</p>
 
 				</div>
 				</section>
 		
 		<section>
 				<div class="black">
-				<p>그렇습니다.<br> 
-				무언가가 제 입 속에 들어가 있었습니다.<p>
+				<p style="text-align: center;"><strong>그렇습니다.<br> 
+				무언가가 제 입 속에 들어가 있었습니다.</strong><p>
 				</div>
 		</section>
 
@@ -206,39 +231,50 @@
 					
 					<img src="insidemouse.webp" style="display: block; margin: 50px auto 0; border-radius: 10px;">
 					
-					<p style="color: grey; font-size: 32px">
+					<p class="subtitle">
 					&ldquo;아니 이게 뭐지??&rdquo;</p>
-					<p> 그 이물감에 놀란 저는 곧장 입에서 그 원인을 뱉어냈습니다. <br>
+					<p class="zomzzalbm"> 그 이물감에 놀란 저는 곧장 입에서 그 원인을 뱉어냈습니다. <br>
 					그리고 그것은 바로-</p>
 
 					<img src="buds2.png" style="display: block; padding-top: 100px; width:100%; text-align:center">
 					
 
-					<p style="font-size:32px;"> <strong>제 갤럭시 버즈 2의 오른쪽 부분이었습니다!</strong></p>
+					<p style="font-size:32px; text-align: center;"> <strong>제 갤럭시 버즈 2의 오른쪽 부분이었습니다!</strong></p>
+					</div>
 
-					<p style="word-break: keep-all;"><br>	
-					<br>주인의 타액으로 범벅이 된 불쌍한 버즈는 얼마나 오랫동안 구내에 있었던 것일까요?
-					<br>멀쩡히 작동은 할까요?
-					<br><br>아니,
-					애당초 어쩌다가 제 입에 들어간 걸까요?</p>
-					
-					<p style=" word-break: keep-all;"> 하지만 주인은 이 믿기지 않는 상황이 그냥 
-					<br>꿈이라고 여긴 것인지 이어폰이 멀쩡한지 확인하지도 않고 그냥 다시 잠들어 버렸습니다.
+					<div class="contents" style="background-color: FloralWhite;">
+
+					<img src="whatthepepe.jpg" style="display:block; width:20%; margin:auto;  margin-left: 9.5%; margin-right: 0;  border-radius: 30px;">
+
+					<p style="display: block; width: max-content; margin-left: -20%; margin-right: 0; max-width: 100%; box-sizing: border-box;">
+					타액으로 범벅이 된 불쌍한 버즈는 대체 얼마나 오랫동안 구내에 있었던 걸까요? 그리고 멀쩡히 작동은 할까요?
+					<br>아니,<br>
+					애당초 어쩌다가 귀에 꽂혀있던 이어폰이 입 안으로 까지 들어 간 걸까요? 혹시 누가 넣은게 아닐까요?</p>
+
+					<p style="display: block; width: max-content; margin-left: 21%; margin-right: 0; max-width: 100%; box-sizing: border-box;"> 하지만 주인은 이 어이없는 상황이 꿈이라고 여겼던 것인지, 단순히 졸렸던 것인지 여튼 이어폰이 멀쩡한지 확인하지도 않고 다시 잠들어 버렸습니다. 
 					</p>
 					
-					<img src="sleeppepe.jpg" style="display:block; width:20%; margin: 100px auto 0; text-align:center; border-radius: 30px;">
+					<img src="sleeppepe.jpg" style="display:block; width:20%; margin:auto;  margin-left: 70%; margin-right: 0;  border-radius: 30px;">
 				</div>
 				</section>
 
 		<section id="secsion3">
-				<div class="contents" style="background-color: GhostWhite;">
+				<div class="contents" style="background-color: GhostWhite;
+				background: linear-gradient(to bottom, 
+            GhostWhite, 
+            rgba(248, 248, 255, 0.5)),
+            url('https://media1.tenor.com/m/cqm2X5OvcYIAAAAC/white-noise.gif');">
 					<p class="nav"> 03 </p >
 					<h2>이어폰은 죽었다</h2>
 
 				<p class="titlebottom" style="padding-bottom: 100px; text-align: center;">점심때가 되서야 느적느적 일어난 주인은 상황이 생각보다 심상치 않다는 것을 알게 됩니다.<br>
-				일단 음질이 엉망이었습니다.</p>
+				일단 노래를 틀어봅니다.</p>
+
+				<img src="hanroro.jpg" style="display: block; width: 40%; margin: auto;">
+				<img src="audio.png" style="display: block; width: 40%; margin: auto; padding-top: 25px; padding-bottom: 200px;">
+
 		
-		<div class="image-container">
+		<div class="image-container blur">
     	<img src="frame.png" alt="프레임 이미지">
     	<p class="overlay-text-mosaic" style="word-break: keep-all; color: grey;">
     	어얼어붙은 마아음에 <br>
@@ -252,11 +288,11 @@
 		이번엔 놓지 말라고오</p>
 		</div>
 				
-		<p style="padding-bottom: 250px;">
-		음향이 뭉개졌습니다.<br>
+		<p class="blur" style="padding-bottom: 250px; text-align: center;">
+		음향이 말그대로 뭉개졌습니다.<br>
 		전날 밤에는 선명하게 꽂히던 소리가 이제는 동굴에서 튼 것마냥 멀게 울리고 있었습니다.</p>
 
-		<div class="image-container">
+		<div class="image-container blur">
     	<img src="frame.png" alt="프레임">
     	<p class="overlay-text " style="color: grey; word-break: keep-all;">아아아슬히 고개 내민 내게에<br>
     			처엇 봄인사를 거언네줘요오오<br>
@@ -268,12 +304,11 @@
 				첫~ 봄인사를 거언네줘요오오<br>
 				피울 수 있게 도와줘요오오</p>
 </div>
-				<p style="padding-top:0;padding-bottom: 50px;"> 음량 출력또한 약해졌습니다. <br>
+				<p class="blur" style="padding-top:0; padding-bottom: 50px; text-align: center;"> 음량 출력또한 약해졌습니다. <br>
 				정상적인 왼쪽과 비교하면 확실히 낮아졌습니다. 낮아져도 너무 낮아져서 음량을 100정도로 올려야 간신히 정상 출력처럼 느껴졌습니다.</p>
 
-				<p style="">아주 제대로 고장난거죠.
+				<p class= "blur" style="padding-top:200px; padding-bottom: 200px; text-align: center">아주 제대로 고장난거죠.
 					<br>에휴.</p>
-
 				</div>
 				</section>
 
@@ -298,9 +333,9 @@
 				<p  class="subtitle" style="font-size:50px; padding:0; padding-top: 100px; color: dimgray;"> &ldquo; </p>
 				<p class="subtitle" style="padding:0; ; color: dimgray;"> What if:<br>
 				입에 이어폰이 들어갔다 나왔다면?</p>
-				<p style="font-size:50px; padding: o; color: dimgray;"> &rdquo; </p>
+				<p style="font-size:50px; padding: o; color: dimgray; text-align: center;"> &rdquo; </p>
 						
-					<div style="display: grid; 
+				<div style="display: grid; 
             	grid-template-columns: 1fr 1fr; 
             	width: 100%; 
             	max-width: 800px;
@@ -308,12 +343,11 @@
             	padding-top: 15px;
             	padding-bottom: 50px;
             	gap: 20px;">
-          
 
     <div class="chatgpt">
         <p class="gpttitle">1. 외부 수분 제거</p>
         <p class="gptexplain">
-            먼저 부드러운 천이나 수건으로 액체를 닦아내야 합니다. <br> 하지만 이 조그마한 이어폰의 철망을 닦는다고 뭐가 크게 달라질까요.
+            먼저 부드러운 천이나 수건으로 액체를 닦아내야 합니다. 하지만 이 조그마한 이어폰의 철망을 닦는다고 뭐가 크게 달라질까요.
         </p>
     </div>
 
@@ -321,7 +355,7 @@
         <p class="gpttitle">2. 건조</p>
         <p class="gptexplain">
             건조에는 두 가지 방식이 있습니다. <br>하나는 드라이기 건조, 다른 하나는 자연 건조. <br> 드라이기를 사용할 때는 약한 출력의 냉풍을 쓰세요! 자연 건조의 경우에는 통풍이 잘되는 그늘에서 최소 24~48시간을 기다려야 합니다.
-            <br><br>이 경우 ‘빨리'를 선도하는 한국인인 저에게는 매우 가혹한 처사였습니다.
+            <br><br>이 경우 ‘빨리'를 선도하는 한국인인 저에게는 가혹한 처사였습니다.
         </p>
     </div>
 
@@ -337,7 +371,7 @@
     <div class="chatgpt">
         <p class="gpttitle">4. 제습제 쓰기</p>
         <p class="gptexplain">
-            지퍼백에 침수당한 이어폰과 실리카겔을 함께 넣어 밀봉합니다. <br> 실리카겔 덕에 더 빠르고 더 확실히 수분이 제거될 것입니다. <br> <br> 노 페인 노 게인
+            지퍼백에 침수당한 이어폰과 실리카겔을 함께 넣어 밀봉합니다. 실리카겔 덕에 더 빠르고 더 확실히 수분이 제거될 것입니다. <br> <br> 노 페인 노 게인
         </p>
     </div>
       
@@ -367,21 +401,18 @@
 				<p class="titlebottom">어흐흑 맙소사.</p> 
 
 				<img src="baby.gif" style="display: block; margin: 0 auto; margin-top:50px; margin-bottom: 15px; text-align:center; border-radius: 10px;">
-				<p> 
-		<br> 대학도 가고 해외여행도 가고 군대도 가고 장장 3년을 함께한 이어폰 친구가 이렇게 허무하게 가버리다니... 그것도 입 속에서 허무히...</p>
-
-
-        <p style="word-break: keep-all; padding-top: 50px;">
-        	이거 장례식이라도 치뤄줘야 할까요? 
-		<br> 혹시 이어폰은 사망보험금같은게 없나요?
-		<br> 말해두자면 이어폰 한 쪽 고치는 서비스는 사실상 없습니다. 알아보니까 그냥 새로 사래요.
+			<p class="tired"> 
+		<span class="a"> 대학도 가고 해외여행도 가고 군대도 가고 장장 3년을 함께한 이어폰 친구가 이렇게 허무하게 가버리다니... 그것도 입 속에서 허무히...</span>
+        <span class="b">이거 장례식이라도 치뤄줘야 할까요? 
+		혹시 이어폰은 사망보험금같은게 없나요?
+		말해두자면 이어폰 한 쪽 고치는 서비스는 사실상 없습니다. 알아보니까 그냥 새로 사래요.
         <br> 
-        <br> 이렇게 어처구니 없게 제 이어폰은 가버렸고, 저는 신품을 사기로 결정했습니다.
+        그렇게 어처구니 없게 제 이어폰은 가버렸고, 저는 신품을 사기로 결정했습니다.</span>
         </p>
 
         <img src="dead.png" style="display: block; margin: 0 auto; text-align:center; width: 40%; margin-top: 100px; margin-bottom: 15px; border-radius: 10px;">
-        <p style="font-size:32px;  font-family: 'Playfair Display', serif;"> R.I.P </p>
-        <p style="color:lightgrey; padding-bottom: 100px;"> 2022.12<br> ~ <br>??? </p>
+        <p style="font-size:32px;  font-family: 'Playfair Display', serif; text-align: center;"> R.I.P </p>
+        <p style="color:lightgrey; padding-bottom: 100px; text-align: center;"> 2022.12<br> ~ <br>??? </p>
  
     	</div>
 		</section>
@@ -390,7 +421,7 @@
 				<div class="contents" style="background-color:whitesmoke;">
 					<p class="nav"> 06 </p>
 					<h2>이어폰을 믿기</h2>
-					<p style="padding:0; padding-top: 15px; padding-bottom: 50px;">여기서 끝이 아니다!
+					<p class="titlebottom">여기서 끝이 아니다!
 					</p>
 					<img src="tryit.jpg" style="display: block; margin: 0 auto; text-align:center; width: 60%; margin-top: 50px; margin-bottom: 15px; border-radius: 10px;">
 					<p>자포자기 한채 신품을 사기로 결정한 저는<br> 그래도 미련이 남았는지 마지막으로 음악을 들어보기로 합니다.
@@ -429,7 +460,7 @@
 
 					<p style="word-break: keep-all;">
 					물론 원상태 그대로 돌아오지는 않았습니다. 오른쪽만 착용하면 역시 음질에 위화감이 있었습니다.<br>
-					그치만 뭐 어때요 덕분에 별 시덥잖은 이유로 신품을 살 이유는 없어졌습니다.<br> <br> </p>
+					그치만 뭐 어때요 덕분에 시덥잖은 이유로 신품을 살 이유는 없어졌습니다.<br> <br> </p>
 
 		</div>
 		</section>
@@ -441,11 +472,9 @@
 					margin: auto; padding-top: 50px; padding-bottom: 50px; text-align: center;">
 					<p class="nav"> </p>
 					<img src="mine.jpg" style="display: block; width: 30%; margin: 0 auto; margin-top: 25px; margin-bottom: 25px;">
-					<p>지금도 전 이 죽다살아난 이어폰을 애용하고 있습니다. 어쩌면 전보다 친밀해진 기분도 드는데, 이런 경험이 물건에 대한 애착을 키워주는게 아닐까요?
-					</p>
-
-					<p>여튼 이런 불상사가 또 생길 수 있으니 이어폰을 끼고 자버리는 일은 없게 됐습니다.
-						<br>아니 가끔은 끼고 자요. 정말 가끔.
+					<p>전 이 죽다살아난 이어폰을 아직도 애용하고 있습니다. 전보다 친밀해진 기분도 드는데, 이런 경험이 물건에 대한 애착을 키워주는게 아닐까요?
+					<br>여튼 또 이런 불상사가 생길 수 있으니 이어폰을 끼고 자는 일은 없게 됐습니다.
+						사실 가끔은 끼고 자요. 정말 가끔.
 						<br>뭐,<br><br>
 						또 입에 들어가겠어요?
 						<br>
